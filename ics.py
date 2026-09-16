@@ -2,9 +2,8 @@ from datetime import datetime, timedelta
 from pathlib import Path
 from textwrap import dedent
 from uuid import uuid4
-from zoneinfo import ZoneInfo
+from settings import TIMEZONE
 
-TIMEZONE = ZoneInfo("Europe/Zurich")
 OUTPUT_FILE = Path("WG4_Meeting.ics")
 ZOOM_URL = "https://maine.zoom.us/j/83399700188"
 
