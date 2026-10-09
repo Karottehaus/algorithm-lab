@@ -4,6 +4,7 @@ data_path = "data/260617_PK_Dino.h5"
 
 with h5py.File(data_path, "r") as f:
     print("Top-level keys:", list(f.keys()))
+    group = f["calibrated images 1"]
 
 
     def inspect(name, obj):
@@ -13,4 +14,4 @@ with h5py.File(data_path, "r") as f:
             print(f"Group: {name}")
 
 
-    f.visititems(inspect)
+    group.visititems(inspect)
